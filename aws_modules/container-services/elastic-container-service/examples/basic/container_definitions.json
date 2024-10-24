@@ -1,0 +1,33 @@
+[
+    {
+        "name": "nginix",
+        "image": "nginx:latest",
+        "cpu": 1024,
+        "memory": 3072,
+        "portMappings": [
+            {
+                "name": "nginix-80-tcp",
+                "containerPort": 80,
+                "hostPort": 80,
+                "protocol": "tcp"
+            }
+        ],
+        "essential": true,
+        "entryPoint": [
+            "/"
+        ],
+        "command": [
+            "sleep",
+            "10"
+        ],
+        "environment": [
+            {
+                "name": "VARNAME",
+                "value": "VARVAL"
+            }
+        ],
+        "mountPoints": [],
+        "volumesFrom": [],
+        "systemControls": []
+    }
+]
